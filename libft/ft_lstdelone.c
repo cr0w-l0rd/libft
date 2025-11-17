@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 14:02:02 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 15:26:02 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 21:41:44 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,10 @@
 
 #include "libft.h"
 
-void    ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    del(lst->content);
+	if (!lst || !del)
+		return ;
+	del(lst->content);
 	free(lst);
 }

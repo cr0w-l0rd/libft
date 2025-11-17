@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:56:21 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 20:37:56 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 21:52:57 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 
 # include <stddef.h>
 # include <stdlib.h>
-# include <unistd.h>
 
 /* Mandatory Functions */
 int		ft_isalpha(int c);

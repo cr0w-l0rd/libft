@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:39:49 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/10/25 04:49:12 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 21:43:22 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,6 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 
 	if (dst > src_c && dst < src_c + len)
 	{
-		// Copy backwards
 		while (len > 0)
 		{
 			len--;
@@ -35,7 +34,6 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 	}
 	else
 	{
-		// Copy forwards
 		i = 0;
 		while (i < len)
 		{

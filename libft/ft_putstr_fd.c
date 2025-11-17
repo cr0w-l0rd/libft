@@ -3,25 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:04:23 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/07 14:04:27 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 21:54:12 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <unistd.h>
 
-void    ft_putstr_fd(char *s, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    unsigned int    i;
+	unsigned int	i;
 
-    i = 0;
-    while (s[i] != '\0')
-    {
-        write(fd, &s[i], 1);
-        i++;
-    }
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
 
 /*
@@ -29,14 +30,14 @@ void    ft_putstr_fd(char *s, int fd)
 
 int main(int argc, char *argv[])
 {
-    if (argc != 3)
-    {
-        printf("Blud u gotta put in 3 arguments, smthn liddis : a.out yoooooo 1");
-        return (1);
-    }
-    char *s = argv[1];
-    int fd = ft_atoi(argv[2]);
-    ft_putstr_fd(s, fd);
-    return (0);
+	if (argc != 3)
+	{
+		printf("Blud u gotta put in 3 arguments, smthn liddis : a.out yoooooo 1");
+		return (1);
+	}
+	char *s = argv[1];
+	int fd = ft_atoi(argv[2]);
+	ft_putstr_fd(s, fd);
+	return (0);
 }
 */

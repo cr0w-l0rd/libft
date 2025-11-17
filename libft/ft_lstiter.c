@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 15:48:35 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 17:26:20 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 21:42:44 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,8 @@ void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	t_list	*temp;
 	
+	if (!lst || !f)
+		return ;
 	temp = lst;
 	while (temp)
 	{
