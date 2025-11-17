@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/15 17:10:05 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/15 18:19:29 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 21:08:14 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,7 @@ int	ft_lstsize(t_list *lst)
 	t_list	*temp;
 
 	size = 0;
+	temp = lst;
 	while (temp)
 	{
 		temp = temp->next;

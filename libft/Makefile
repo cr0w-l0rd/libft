@@ -6,7 +6,7 @@
 #    By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/21 23:07:11 by mbiusing          #+#    #+#              #
-#    Updated: 2025/11/17 15:25:40 by mbiusing         ###   ########.fr        #
+#    Updated: 2025/11/17 21:11:15 by mbiusing         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -63,10 +63,11 @@ BONUSOBJ 	= ${BONUSSRC:.c=.o}
 CC 			= cc
 CFLAGS 		= -Wall -Wextra -Werror
 AR 			= ar -rcs
+RM 			= rm -f
+
 # r : inserts the files member into archive w replacement #
 # c : create archive #
 # s : write / update  object-file index into d archive #
-RM 			= rm -f
 
 # Compilation #
 
@@ -84,20 +85,21 @@ $(NAME): $(OBJ)
 
 bonus: ${OBJ} ${BONUSOBJ}
 	@$(AR) ${NAME} ${OBJ} ${BONUSOBJ}
-	@echo "Bonus functions added to $(NAME)."
+	@echo "bonus functions added to $(NAME)."
 
 # make clean - remove all object files #
 
 clean:
 	@$(RM) $(OBJ) $(BONUSOBJ)
+	@echo "$(OBJ) and $(BONUSOBJ) has just been wiped out"
 
 # make fclean - clean + remove libft.a #
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(OBJ) and $(NAME) has just been wiped out"
+	@echo "$(OBJ), $(BONUSOBJ) and $(NAME) has just been wiped out"
 
-# make re - rebuild : 
+# make re - rebuild #
 
 re: fclean all
 
