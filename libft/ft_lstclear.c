@@ -1,35 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstclear.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 14:51:53 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 18:59:54 by mbiusing         ###   ########.fr       */
+/*   Created: 2025/11/17 15:27:21 by mbiusing          #+#    #+#             */
+/*   Updated: 2025/11/17 15:47:36 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void	ft_lstclear(t_list **lst, void (*del)(void*))
 {
-	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+	t_list	*temp;
+
+	if (!lst)
+		return ;
+	while (*lst)
+	{
+		temp = (*lst)->next;
+		ft_lstdelone((*lst), del);
+		*lst = temp;
+	}
+	free(*lst);
+	*lst = NULL;
 }
-
-// #include <stdio.h>
-
-// int main(int argc, char *argv[])
-// {
-//     if (argc != 3)
-//     {
-//         printf("Blud u gotta put in 3 arguments, smthn liddis : a.out yoooooo 1");
-//         return (1);
-//     }
-
-//     char *str = argv[1];
-//     int fd = ft_atoi(argv[2]);
-//     ft_putendl_fd(str, fd);
-//     return (0);
-// }

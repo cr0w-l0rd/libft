@@ -1,35 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
+/*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/07 14:51:53 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 18:59:54 by mbiusing         ###   ########.fr       */
+/*   Created: 2025/11/17 14:02:02 by mbiusing          #+#    #+#             */
+/*   Updated: 2025/11/17 15:26:02 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+// DESC:	Takes as a parameter a node and frees the memory of
+// 		the node’s content using the function ’del’ given
+// 		as a parameter and free the node. The memory of
+// 		’next’ must not be freed.
+
 #include "libft.h"
 
-void	ft_putendl_fd(char *s, int fd)
+void    ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	ft_putstr_fd(s, fd);
-	write(fd, "\n", 1);
+    del(lst->content);
+	free(lst);
 }
-
-// #include <stdio.h>
-
-// int main(int argc, char *argv[])
-// {
-//     if (argc != 3)
-//     {
-//         printf("Blud u gotta put in 3 arguments, smthn liddis : a.out yoooooo 1");
-//         return (1);
-//     }
-
-//     char *str = argv[1];
-//     int fd = ft_atoi(argv[2]);
-//     ft_putendl_fd(str, fd);
-//     return (0);
-// }

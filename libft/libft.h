@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 11:56:21 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/15 12:45:51 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 14:40:29 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,14 +16,6 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-
-/* Singly Linked List */
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
 
 /* Mandatory Functions */
 int		ft_isalpha(int c);
@@ -64,5 +56,16 @@ void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
+
+/* Singly Linked List */
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
+/* Bonus !! :3 */
+
 
 #endif

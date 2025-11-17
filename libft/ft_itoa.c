@@ -3,74 +3,73 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42kl.edu.my>    +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 22:31:48 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/03 22:31:53 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 15:31:40 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int  ft_countchar(long n)
+static int	ft_countchar(long n)
 {
-    int count = 0;
+	int count = 0;
 
-    if (n <= 0)
-        count++;
-    while (n != 0)
-    {
-        n /= 10;
-        count++;
-    }
-    return (count);
+	if (n <= 0)
+		count++;
+	while (n != 0)
+	{
+		n /= 10;
+		count++;
+	}
+	return (count);
 }
 
-char    *ft_itoa(int n)
+char	*ft_itoa(int n)
 {
-    long    nb;
-    int     len;
-    char    *str;
+	long	nb;
+	int		len;
+	char	*str;
 
-    nb = n;
-    len = ft_countchar(nb);
-    str = malloc(sizeof(char) * (len + 1));
-    if (!str)
-        return (NULL);
-    str[len] = '\0';
-    if (nb < 0)
-    {
-        str[0] = '-';
-        nb = -nb;
-    }
-    if (nb == 0)
-        str[0] = '0';
-    while (nb > 0)
-    {
-        str[--len] = (nb % 10) + '0';
-        nb /= 10;
-    }
-    return (str);
+	nb = n;
+	len = ft_countchar(nb);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	if (nb < 0)
+	{
+		str[0] = '-';
+		nb = -nb;
+	}
+	if (nb == 0)
+		str[0] = '0';
+	while (nb > 0)
+	{
+		str[--len] = (nb % 10) + '0';
+		nb /= 10;
+	}
+	return (str);
 }
-/*
-#include <stdio.h>
 
-int main(int argc, char *argv[])
-{
-    int     n;
-    char    *str;
+// #include <stdio.h>
 
-    if (argc != 2)
-    {
-        printf("Blud 2 n only 2 arguments including program name pls\n");
-        return (1);
-    }
-    n = ft_atoi(argv[1]);
-    str = ft_itoa(n);
-    if (!str)
-        return (1);
-    printf("%s\n", str);
-    free(str);
-    return (0);
-}
-*/
+// int main(int argc, char *argv[])
+// {
+//     int     n;
+//     char    *str;
+
+//     if (argc != 2)
+//     {
+//         printf("enter smthn liddis: ./a.out -12345\n");
+//         return (1);
+//     }
+//     n = ft_atoi(argv[1]);
+//     str = ft_itoa(n);
+//     if (!str)
+//         return (1);
+//     printf("%s\n", str);
+//     free(str);
+//     return (0);
+// }
