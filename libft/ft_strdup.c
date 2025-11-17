@@ -6,11 +6,12 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 23:47:02 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/10/28 12:12:15 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 23:26:57 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strdup(const char *s)
 {

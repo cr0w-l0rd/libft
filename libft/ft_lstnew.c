@@ -6,11 +6,12 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/14 13:18:42 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/15 15:47:42 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 23:30:02 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 t_list	*ft_lstnew(void *content)
 {

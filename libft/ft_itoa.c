@@ -6,11 +6,12 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 22:31:48 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 15:31:40 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 23:29:19 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	ft_countchar(long n)
 {
@@ -26,18 +27,8 @@ static int	ft_countchar(long n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+static char	*convert_int(long nb, size_t len, char *str)
 {
-	long	nb;
-	int		len;
-	char	*str;
-
-	nb = n;
-	len = ft_countchar(nb);
-	str = malloc(sizeof(char) * (len + 1));
-	if (!str)
-		return (NULL);
-	str[len] = '\0';
 	if (nb < 0)
 	{
 		str[0] = '-';
@@ -50,6 +41,22 @@ char	*ft_itoa(int n)
 		str[--len] = (nb % 10) + '0';
 		nb /= 10;
 	}
+	return (str);
+}
+
+char	*ft_itoa(int n)
+{
+	long	nb;
+	int		len;
+	char	*str;
+
+	nb = n;
+	len = ft_countchar(nb);
+	str = malloc(sizeof(char) * (len + 1));
+	if (!str)
+		return (NULL);
+	str[len] = '\0';
+	convert_int(nb, len, str);
 	return (str);
 }
 

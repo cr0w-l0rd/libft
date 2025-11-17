@@ -6,11 +6,12 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 00:14:12 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 15:29:43 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 23:29:36 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {

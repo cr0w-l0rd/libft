@@ -6,11 +6,12 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:56:17 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/13 10:28:54 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 23:27:50 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static int	is_in_set(char c, const char *set)
 {

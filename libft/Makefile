@@ -6,7 +6,7 @@
 #    By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/21 23:07:11 by mbiusing          #+#    #+#              #
-#    Updated: 2025/11/17 21:11:15 by mbiusing         ###   ########.fr        #
+#    Updated: 2025/11/17 23:37:07 by mbiusing         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,7 +97,7 @@ clean:
 
 fclean: clean
 	@$(RM) $(NAME)
-	@echo "$(OBJ), $(BONUSOBJ) and $(NAME) has just been wiped out"
+	@echo "$(NAME) has also just been wiped out"
 
 # make re - rebuild #
 

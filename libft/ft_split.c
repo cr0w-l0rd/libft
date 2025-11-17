@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42kl.edu.m      +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 22:13:50 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/10/31 23:00:07 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/17 23:37:49 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdlib.h>
 
 static size_t	ft_tokencount(char const *str, char delimiter)
 {
@@ -31,33 +32,12 @@ static size_t	ft_tokencount(char const *str, char delimiter)
 	return (count);
 }
 
-static char	*ft_malloc_n_copy_word(const char *s, char c)
-{
-	char	*token;
-	size_t	len;
-	size_t	i;
-
-	len = 0;
-	while (s[len] && s[len] != c)
-		len++;
-	token = malloc(sizeof(char) * (len + 1));
-	if (!token)
-		return (NULL);
-	i = 0;
-	while (i < len)
-	{
-		token[i] = s[i];
-		i++;
-	}
-	token[i] = '\0';
-	return (token);
-}
-
 char	**ft_split(char const *s, char c)
 {
 	char	**strings;
 	size_t	i;
 	size_t	j;
+	size_t	start;
 
 	if (!s)
 		return (NULL);
@@ -70,9 +50,10 @@ char	**ft_split(char const *s, char c)
 	{
 		if (s[i] != c)
 		{
-			strings[j] = ft_malloc_n_copy_word(&s[i], c);
+			start = i;
 			while (s[i] && s[i] != c)
 				i++;
+			strings[j] = ft_substr(s, start, i - start);
 			j++;
 		}
 		else
@@ -81,3 +62,37 @@ char	**ft_split(char const *s, char c)
 	strings[j] = NULL;
 	return (strings);
 }
+
+// #include <stdio.h>
+// #include "libft.h"
+
+// int main(int argc, char **argv)
+// {
+// 	char    **result;
+// 	int     i = 0;
+
+// 	if (argc != 3)
+// 	{
+// 		printf("Usage: %s \"string\" \"delimiter\"\n", argv[0]);
+// 		return (1);
+// 	}
+// 	result = ft_split(argv[1], argv[2][0]);
+// 	if (!result)
+// 	{
+// 		printf("ft_split returned NULL\n");
+// 		return (1);
+// 	}
+// 	while (result[i])
+// 	{
+// 		printf("%s\n", result[i]);
+// 		i++;
+// 	}
+// 	i = 0;
+// 	while (result[i])
+// 	{
+// 		free(result[i]);
+// 		i++;
+// 	}
+// 	free(result);
+// 	return (0);
+// }
