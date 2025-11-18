@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 22:13:50 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 12:21:52 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:28:39 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,11 @@ static size_t	ft_tokencount(char const *str, char delimiter)
 	return (count);
 }
 
-static char	put(char const *s, char c, char **strings, size_t start)
+static char	**put(char const *s, char c, char **strings)
 {
 	size_t	i;
 	size_t	j;
+	size_t start;
 
 	i = 0;
 	j = 0;
@@ -52,20 +53,20 @@ static char	put(char const *s, char c, char **strings, size_t start)
 		else
 			i++;
 	}
-	strings[j] = '\0';
+	strings[j] = NULL;
+	return (strings);
 }
 
 char	**ft_split(char const *s, char c)
 {
-	char	**strings;	
-	size_t	start;
+	char	**strings;
 
 	if (!s)
 		return (NULL);
 	strings = malloc(sizeof(char *) * (ft_tokencount(s, c) + 1));
 	if (!strings)
 		return (NULL);
-	put(s, c, strings, start);
+	put(s, c, strings);
 	return (strings);
 }
 

@@ -6,14 +6,14 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 00:25:28 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 11:56:17 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:27:13 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char	put(char *newstring, char const *s1, char const *s2)
+static char	*put(char *newstring, char const *s1, char const *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -35,6 +35,7 @@ static char	put(char *newstring, char const *s1, char const *s2)
 		j++;
 	}
 	newstring[i + s2len] = '\0';
+	return (newstring);
 }
 
 char	*ft_strjoin(char const *s1, char const *s2)
