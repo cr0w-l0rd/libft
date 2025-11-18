@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:08:26 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 11:52:09 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:49:28 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,15 +25,15 @@ char	*ft_strchr(const char *str, int c)
 	int		i;
 	char	ch;
 
-	ch = (char)c;
+	ch = (char) c;
 	i = 0;
 	while (str[i])
 	{
 		if (str[i] == ch)
-			return ((char *)&str[i]);
+			return ((char *) &str[i]);
 		i++;
 	}
 	if (ch == '\0')
-		return ((char *)&str[i]);
+		return ((char *) &str[i]);
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 22:13:50 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 12:28:39 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:38:43 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static char	**put(char const *s, char c, char **strings)
 {
 	size_t	i;
 	size_t	j;
-	size_t start;
+	size_t	start;
 
 	i = 0;
 	j = 0;
