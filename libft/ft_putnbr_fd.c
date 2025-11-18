@@ -6,16 +6,17 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 16:04:12 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 21:44:05 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:44:41 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-	long nb = n;
+	long	nb;
 
+	nb = n;
 	if (nb < 0)
 	{
 		ft_putchar_fd('-', fd);

@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 00:14:12 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 23:29:36 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:47:27 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,13 @@
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	size_t 			slen;
+	size_t			slen;
 	char			*newstr;
 	unsigned int	i;
 
 	i = 0;
 	if (s == NULL || f == NULL)
-	return (NULL);
+		return (NULL);
 	slen = ft_strlen(s);
 	newstr = (char *) malloc(sizeof(char) * slen);
 	if (!newstr)

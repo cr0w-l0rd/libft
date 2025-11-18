@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42kl.edu.m      +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 19:06:47 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/10/26 23:22:00 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:46:03 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 	i = 0;
 	if (little[0] == '\0')
-		return ((char*) big);
+		return ((char *) big);
 	while (big[i] && i < len)
 	{
 		j = 0;

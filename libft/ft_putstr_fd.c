@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:04:23 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 21:54:12 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:44:55 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		printf("Blud u gotta put in 3 arguments, smthn liddis : a.out yoooooo 1");
+		printf("put in 3 arguments, smthn liddis : a.out yoooooo 1");
 		return (1);
 	}
 	char *s = argv[1];

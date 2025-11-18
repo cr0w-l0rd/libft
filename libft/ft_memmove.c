@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 16:39:49 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 21:43:22 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 12:03:06 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,32 +14,25 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t len)
 {
-	unsigned char	*dst;
+	unsigned char		*dst;
 	const unsigned char	*src_c;
-	size_t			i;
+	size_t				i;
 
 	if (!dest && !src)
 		return (NULL);
-
 	dst = (unsigned char *)dest;
 	src_c = (const unsigned char *)src;
-
 	if (dst > src_c && dst < src_c + len)
 	{
-		while (len > 0)
-		{
-			len--;
+		while (--len > 0)
 			dst[len] = src_c[len];
-		}
 	}
 	else
 	{
 		i = 0;
-		while (i < len)
-		{
+		while (i++ < len)
 			dst[i] = src_c[i];
-			i++;
-		}
 	}
 	return (dest);
 }
+

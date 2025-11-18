@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42kl.edu.m      +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 16:05:23 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/10/25 17:54:18 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:48:03 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,8 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 
 	dest_len = ft_strlen(dest);
 	src_len = ft_strlen(src);
-
 	if (dest_len >= size)
 		return (size + src_len);
-
 	i = 0;
 	while (src[i] && dest_len + i < size - 1)
 	{

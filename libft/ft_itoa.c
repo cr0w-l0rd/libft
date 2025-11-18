@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 22:31:48 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 23:29:19 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:39:38 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 
 static int	ft_countchar(long n)
 {
-	int count = 0;
+	int	count;
 
+	count = 0;
 	if (n <= 0)
 		count++;
 	while (n != 0)

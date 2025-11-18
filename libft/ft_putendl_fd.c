@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/07 14:51:53 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 21:53:40 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:44:08 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	ft_putendl_fd(char *s, int fd)
 // {
 //     if (argc != 3)
 //     {
-//         printf("Blud u gotta put in 3 arguments, smthn liddis : a.out yoooooo 1");
+//         printf("put in 3 arguments liddis : a.out yoooooo 1");
 //         return (1);
 //     }
 

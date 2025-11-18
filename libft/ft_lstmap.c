@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/17 20:42:44 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 21:24:47 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:41:56 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list *new_list;
-	t_list *node;
-	
+	t_list	*new_list;
+	t_list	*node;
+
 	if (!lst || !f || !del)
 		return (NULL);
 	new_list = NULL;

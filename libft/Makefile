@@ -6,7 +6,7 @@
 #    By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/21 23:07:11 by mbiusing          #+#    #+#              #
-#    Updated: 2025/11/17 23:37:07 by mbiusing         ###   ########.fr        #
+#    Updated: 2025/11/18 11:37:08 by mbiusing         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,7 +58,7 @@ BONUSSRC =	ft_lstnew.c \
 			ft_lstmap.c
 
 OBJ 		= $(SRC:.c=.o)
-BONUSOBJ 	= ${BONUSSRC:.c=.o}
+BONUSOBJ 	= $(BONUSSRC:.c=.o)
 
 CC 			= cc
 CFLAGS 		= -Wall -Wextra -Werror
@@ -82,6 +82,8 @@ $(NAME): $(OBJ)
 	@echo "Compiling..."
 	@$(AR) $(NAME) $(OBJ)
 	@echo "$(NAME) has just been birthed into existence along with the fellow object files"
+
+# make bonus #
 
 bonus: ${OBJ} ${BONUSOBJ}
 	@$(AR) ${NAME} ${OBJ} ${BONUSOBJ}

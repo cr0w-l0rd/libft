@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:08:26 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 23:47:42 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/18 11:52:09 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 
 char	*ft_strchr(const char *str, int c)
 {
-	int	i;
+	int		i;
 	char	ch;
 
 	ch = (char)c;
