@@ -6,7 +6,7 @@
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 12:27:07 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 22:19:29 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/19 14:47:09 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,9 +45,20 @@ int	ft_atoi(const char *num)
 	return (posneg * res);
 }
 
-/*int	main(void)
+/*
+#include <stdio.h>
+int	main(int argc, char **argv)
 {
-	char test1[] = " kdshfs 123";
-	printf("%d", ft_atoi(test1));
-	return (0);
-}*/
+	int	i;
+
+	i = 1;
+	if (argc < 2)
+		return (0);
+	while (i < argc)
+	{
+		printf("actual: %d \n", ft_atoi(argv[i]));
+		printf("expected: %d \n", atoi(argv[i]));
+		i++;
+	}
+}
+*/
