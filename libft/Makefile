@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+         #
+#    By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/21 23:07:11 by mbiusing          #+#    #+#              #
-#    Updated: 2025/11/18 11:37:08 by mbiusing         ###   ########.fr        #
+#    Updated: 2025/11/19 19:29:40 by crowlord         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -85,8 +85,8 @@ $(NAME): $(OBJ)
 
 # make bonus #
 
-bonus: ${OBJ} ${BONUSOBJ}
-	@$(AR) ${NAME} ${OBJ} ${BONUSOBJ}
+bonus: $(OBJ) $(BONUSOBJ)
+	@$(AR) $(NAME) $(OBJ) $(BONUSOBJ)
 	@echo "bonus functions added to $(NAME)."
 
 # make clean - remove all object files #

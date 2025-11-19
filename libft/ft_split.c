@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 22:13:50 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 12:38:43 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/19 19:34:46 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static size_t	ft_tokencount(char const *str, char delimiter)
 	return (count);
 }
 
-static char	**put(char const *s, char c, char **strings)
+static char	**fill_tokens(char const *s, char c, char **strings)
 {
 	size_t	i;
 	size_t	j;
@@ -66,7 +66,7 @@ char	**ft_split(char const *s, char c)
 	strings = malloc(sizeof(char *) * (ft_tokencount(s, c) + 1));
 	if (!strings)
 		return (NULL);
-	put(s, c, strings);
+	fill_tokens(s, c, strings);
 	return (strings);
 }
 
