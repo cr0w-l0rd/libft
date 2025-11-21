@@ -3,12 +3,24 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/04 00:14:12 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 11:47:27 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:00:16 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	DESC:	Applies the function f to each character of the
+			string s, passing its index as the first argument
+			and the character itself as the second. A new
+			string is created (using malloc(3)) to collect the
+			results from the successive applications of f.
+	RETURN:	The string created from the successive applications
+			of ’f’.
+			Returns NULL if the allocation fails.
+	PARAMS;	s: The string on which to iterate.
+			f: The function to apply to each character.
+*/
 
 #include "libft.h"
 #include <stdlib.h>

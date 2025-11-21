@@ -3,12 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 22:31:48 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 11:39:38 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:57:42 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	DESC:	Allocates (with malloc(3)) and returns a string
+			representing the integer received as an argument.
+			Negative numbers must be handled.
+	RETURN:	The string representing the integer.
+			NULL if the allocation fails.
+	PARAM;	n: the integer to convert.
+*/
 
 #include "libft.h"
 #include <stdlib.h>

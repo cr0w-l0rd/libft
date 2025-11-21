@@ -3,21 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 12:27:07 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/19 14:47:09 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/20 22:18:40 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// 	NAME
-// 		atoi -- convert ASCII string to integer
-//	SYNOPSIS
-// 		int atoi(const char *str);
-//	DESCRIPTION
-// 		The atoi() function converts the initial portion of the string pointed 
-// 		to by str to int representation.
-
+/* DESC :	The atoi() function converts the initial portion of 
+			the string pointed to by str to int representation.
+*/
+			
 #include "libft.h"
 
 int	ft_atoi(const char *num)
@@ -45,20 +41,19 @@ int	ft_atoi(const char *num)
 	return (posneg * res);
 }
 
-/*
-#include <stdio.h>
-int	main(int argc, char **argv)
-{
-	int	i;
+// #include <stdio.h>
+// #include <stdlib.h>
+// int	main(int argc, char **argv)
+// {
+// 	int	i;
 
-	i = 1;
-	if (argc < 2)
-		return (0);
-	while (i < argc)
-	{
-		printf("actual: %d \n", ft_atoi(argv[i]));
-		printf("expected: %d \n", atoi(argv[i]));
-		i++;
-	}
-}
-*/
+// 	i = 1;
+// 	if (argc < 2)
+// 		return (0);
+// 	while (i < argc)
+// 	{
+// 		printf("actual: %d \n", ft_atoi(argv[i]));
+// 		printf("expected: %d \n", atoi(argv[i]));
+// 		i++;
+// 	}
+// }

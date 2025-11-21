@@ -6,9 +6,19 @@
 /*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/31 22:13:50 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/19 19:34:46 by crowlord         ###   ########.fr       */
+/*   Updated: 2025/11/21 12:16:09 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	DESC:	Allocates (with malloc(3)) and returns an array
+			of strings obtained by splitting ’s’ using the
+			character ’c’ as a delimiter. The array must end
+			with a NULL pointer.
+	RETURN:	The array of new strings resulting from the split.
+			NULL if the allocation fails.
+	PARAMS:	s: The string to be split.
+			c: The delimiter character.
+*/
 
 #include "libft.h"
 #include <stdlib.h>
@@ -70,36 +80,21 @@ char	**ft_split(char const *s, char c)
 	return (strings);
 }
 
-// #include <stdio.h>
-// #include "libft.h"
+/*
+#include <stdio.h>
+int	main(int argc, char **argv)
+{
+	char	**st_arr;
+	int	i;
 
-// int main(int argc, char **argv)
-// {
-// 	char    **result;
-// 	int     i = 0;
-
-// 	if (argc != 3)
-// 	{
-// 		printf("Usage: %s \"string\" \"delimiter\"\n", argv[0]);
-// 		return (1);
-// 	}
-// 	result = ft_split(argv[1], argv[2][0]);
-// 	if (!result)
-// 	{
-// 		printf("ft_split returned NULL\n");
-// 		return (1);
-// 	}
-// 	while (result[i])
-// 	{
-// 		printf("%s\n", result[i]);
-// 		i++;
-// 	}
-// 	i = 0;
-// 	while (result[i])
-// 	{
-// 		free(result[i]);
-// 		i++;
-// 	}
-// 	free(result);
-// 	return (0);
-// }
+	i = 0;
+	if (argc != 2)
+		return (0);
+	st_arr = ft_split(argv[1], ' ');
+	while (st_arr[i])
+		printf("%s \n", st_arr[i++]);
+	i = 0;
+	while (st_arr[i])
+		free(st_arr[i++]);
+}
+*/

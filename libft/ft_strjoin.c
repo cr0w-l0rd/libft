@@ -3,17 +3,26 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 00:25:28 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 12:27:13 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:55:15 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	DESC:	Allocates (with malloc(3)) and returns a new
+			string, which is the result of the concatenation
+			of ’s1’ and ’s2’.
+	RETURN:	The new string.
+			NULL if the allocation fails.
+	PARAMS:	s1: The prefix string.
+			s2: The suffix string.
+*/
 
 #include "libft.h"
 #include <stdlib.h>
 
-static char	*put(char *newstring, char const *s1, char const *s2)
+static char	*fill_joined_string(char *newstring, char const *s1, char const *s2)
 {
 	size_t	i;
 	size_t	j;
@@ -51,7 +60,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	newstring = (char *)malloc(sizeof(char) * (s1len + s2len + 1));
 	if (!newstring)
 		return (NULL);
-	put (newstring, s1, s2);
+	fill_joined_string(newstring, s1, s2);
 	return (newstring);
 }
 /*

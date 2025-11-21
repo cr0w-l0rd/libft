@@ -3,12 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/06 00:39:59 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 21:45:22 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/20 17:01:31 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	DESC:	Applies the function ’f’ on each character of
+			the string passed as argument, passing its index
+			as first argument. Each character is passed by
+			address to ’f’ to be modified if necessary.
+	PARAMS;	s: The string on which to iterate.
+			f: The function to apply to each character.
+*/
 
 #include "libft.h"
 

@@ -3,12 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/28 13:56:17 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 11:45:28 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/20 22:30:51 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*	DESC:	Allocates (with malloc(3)) and returns a copy of
+			’s1’ with the characters specified in ’set’ removed
+			from the beginning and the end of the string.
+	RETURN:	The trimmed string.
+			NULL if the allocation fails.
+	PARAMS;	s1: The string to be trimmed.
+			set: The reference set of characters to trim.
+*/
 
 #include "libft.h"
 #include <stdlib.h>
@@ -30,3 +39,25 @@ char	*ft_strtrim(char const *s1, char const *set)
 	len = end - start;
 	return (ft_substr(s1, start, len));
 }
+
+// #include <stdio.h>
+
+// int main(int argc, char **argv)
+// {
+// 	if (argc != 3)
+// 	{
+// 		printf("Usage: %s <string> <set>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	char *result = ft_strtrim(argv[1], argv[2]);
+// 	if (!result)
+// 	{
+// 		printf("ft_strtrim returned NULL\n");
+// 		return (1);
+// 	}
+// 	printf("Original: \"%s\"\n", argv[1]);
+// 	printf("Set		: \"%s\"\n", argv[2]);
+// 	printf("Trimmed	: \"%s\"\n", result);
+// 	free(result);
+// 	return (0);
+// }

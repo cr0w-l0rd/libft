@@ -6,14 +6,19 @@
 /*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/26 23:58:16 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/19 19:58:01 by crowlord         ###   ########.fr       */
+/*   Updated: 2025/11/20 16:00:21 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* DESC :	Allocates (with malloc(3)) and returns a substring
+/* 	DESC:	Allocates (with malloc(3)) and returns a substring
 			from the string ’s’.
 			The substring begins at index ’start’ and is of
 			maximum size ’len’.
+	RETURN:	The substring.
+			NULL if the allocation fails.
+	PARAMS:	s: The string from which to create the substring.
+			start: The start index of the substring in the string ’s’.
+			len: The maximum length of the substring.
 */
 
 #include "libft.h"

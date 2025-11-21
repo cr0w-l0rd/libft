@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/25 17:46:17 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 11:46:55 by mbiusing         ###   ########.fr       */
+/*   Updated: 2025/11/21 11:52:38 by crowlord         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,3 +29,34 @@ char	*ft_strrchr(const char *s, int c)
 	}
 	return (NULL);
 }
+
+// #include <stdio.h>
+// int main(int argc, char **argv)
+// {
+// 	if (argc != 3)
+// 	{
+// 		printf("Do it like: %s <string> <char>\n", argv[0]);
+// 		return (1);
+// 	}
+// 	char c = argv[2][0];
+// 	char *res = ft_strrchr(argv[1], c);
+// 	if (res)
+// 	{
+// 		printf("Searching for '%c' in \"%s\"\n", c, argv[1]);
+// 		printf("Result pointer: %p\n", (void *)res);
+// 		printf("Found at index: %ld\n", res - argv[1]);
+// 		printf("Substring from there: \"%s\"\n", res);
+// 	}
+// 	else
+// 		printf("'%c' not found in \"%s\"\n", c, argv[1]);
+// 	return (0);
+// }
+
+/*	%p is used to display the memory address stored in a pointer variable.
+	The output is usually presented in hexadecimal format, prefixed w/ 0x.
+	The corresponding argument to printf() must be a void * pointer. 
+	If you are printing the address of a variable of a different type, 
+	it is good practice to explicitly cast it to (void *) 
+	to avoid potential warnings or undefined behavior, 
+	esp in older C standards / when dealing w/ functions like printf().
+*/

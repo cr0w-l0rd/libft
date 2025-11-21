@@ -6,9 +6,11 @@
 #    By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/21 23:07:11 by mbiusing          #+#    #+#              #
-#    Updated: 2025/11/19 19:29:40 by crowlord         ###   ########.fr        #
+#    Updated: 2025/11/21 12:54:26 by crowlord         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
+
+# name of static library
 
 NAME =		libft.a
 
@@ -57,6 +59,8 @@ BONUSSRC =	ft_lstnew.c \
 			ft_lstiter.c \
 			ft_lstmap.c
 
+# automatic substitution
+
 OBJ 		= $(SRC:.c=.o)
 BONUSOBJ 	= $(BONUSSRC:.c=.o)
 
@@ -69,14 +73,22 @@ RM 			= rm -f
 # c : create archive #
 # s : write / update  object-file index into d archive #
 
-# Compilation #
+# Pattern Rule - Compilation 
+# Target % (wildcard / any) .o file : Prerequisite %.c file
+# 	AUTOMATIC VARIABLES;
+#	$< = 	The name of the first prerequisite.
+#	$@ = 	The file name of the target of the rule. 
+# 			If the target is an archive member, then ‘$@’ is the name of the archive file. 
+# 			‘$@’ is the name of whichever target caused the rule’s recipe to be run.
 
 %.o: %.c
 	@$(CC) $(CFLAGS) -I. -c $< -o $@
 
 # make - builds library ( objs + libft.a ) #
 
-all: ${NAME}
+all: $(NAME)
+
+# create libft.a by archiving object files
 
 $(NAME): $(OBJ)
 	@echo "Compiling..."
@@ -105,4 +117,11 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean re all bonus
+#   make test FILE=ft_strtrim
+
+# test:
+# 	@$(CC) $(CFLAGS) $(FILE).c $(NAME) -o test.out
+# 	@echo "Made test for $(FILE).c..."
+# 	@./test.out
+
+.PHONY: clean fclean re all bonus #test
