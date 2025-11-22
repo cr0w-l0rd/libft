@@ -3,18 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/23 12:04:30 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/21 13:06:01 by crowlord         ###   ########.fr       */
+/*   Created: 2025/11/21 13:36:54 by mbiusing          #+#    #+#             */
+/*   Updated: 2025/11/21 13:37:18 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*	DESC:	erases the data in the n bytes of the memory
-			starting at the location pointed to by s, by writing zeros (bytes
-			containing '\0') to that area.
+		starting at the location pointed to by s, by writing zeros (bytes
+		containing '\0') to that area.
 */
-
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)

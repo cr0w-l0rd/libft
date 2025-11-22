@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/25 19:06:47 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/18 11:46:03 by mbiusing         ###   ########.fr       */
+/*   Created: 2025/11/21 13:41:27 by mbiusing          #+#    #+#             */
+/*   Updated: 2025/11/21 14:03:33 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,13 +38,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 
 int main(void)
 {
-	const char *h1 = "Foo Bar Baz";
-	const char *n1 = "Bar";
+	const char *h1 = "yoooooo";
+	const char *n1 = "!!!!";
 	char *result;
-
 	result = ft_strnstr(h1, n1, 11); // Full length
 	printf("Result 1: %s\n", result);
-
 	return 0;
 }
 */

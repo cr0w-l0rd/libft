@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
+/*   By: mbiusing <mbiusing@student.42kl.edu.m      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/14 14:20:08 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/17 21:35:45 by mbiusing         ###   ########.fr       */
+/*   Created: 2025/11/21 13:44:48 by mbiusing          #+#    #+#             */
+/*   Updated: 2025/11/21 13:44:50 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: crowlord <crowlord@student.42.fr>          +#+  +:+       +#+         #
+#    By: mbiusing <mbiusing@student.42kl.edu.my>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/10/21 23:07:11 by mbiusing          #+#    #+#              #
-#    Updated: 2025/11/21 12:54:26 by crowlord         ###   ########.fr        #
+#    Created: 2025/11/21 13:39:08 by mbiusing          #+#    #+#              #
+#    Updated: 2025/11/21 17:19:51 by mbiusing         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -47,9 +47,8 @@ SRC =		ft_isalpha.c \
 			ft_putchar_fd.c \
 			ft_putstr_fd.c \
 			ft_putendl_fd.c \
-			ft_putnbr_fd.c
-
-BONUSSRC =	ft_lstnew.c \
+			ft_putnbr_fd.c \
+			ft_lstnew.c \
 			ft_lstadd_front.c \
 			ft_lstsize.c \
 			ft_lstlast.c \
@@ -62,7 +61,6 @@ BONUSSRC =	ft_lstnew.c \
 # automatic substitution
 
 OBJ 		= $(SRC:.c=.o)
-BONUSOBJ 	= $(BONUSSRC:.c=.o)
 
 CC 			= cc
 CFLAGS 		= -Wall -Wextra -Werror
@@ -96,16 +94,13 @@ $(NAME): $(OBJ)
 	@echo "$(NAME) has just been birthed into existence along with the fellow object files"
 
 # make bonus #
-
-bonus: $(OBJ) $(BONUSOBJ)
-	@$(AR) $(NAME) $(OBJ) $(BONUSOBJ)
-	@echo "bonus functions added to $(NAME)."
+bonus: all
 
 # make clean - remove all object files #
 
 clean:
-	@$(RM) $(OBJ) $(BONUSOBJ)
-	@echo "$(OBJ) and $(BONUSOBJ) has just been wiped out"
+	@$(RM) $(OBJ)
+	@echo "$(OBJ) has just been wiped out"
 
 # make fclean - clean + remove libft.a #
 
@@ -117,7 +112,7 @@ fclean: clean
 
 re: fclean all
 
-#   make test FILE=ft_strtrim
+# make test FILE=ft_strtrim
 
 # test:
 # 	@$(CC) $(CFLAGS) $(FILE).c $(NAME) -o test.out

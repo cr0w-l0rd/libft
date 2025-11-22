@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: mbiusing <mbiusing@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/26 23:25:41 by mbiusing          #+#    #+#             */
-/*   Updated: 2025/11/19 14:35:18 by mbiusing         ###   ########.fr       */
+/*   Created: 2025/11/21 13:38:26 by mbiusing          #+#    #+#             */
+/*   Updated: 2025/11/21 17:15:27 by mbiusing         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 */
 
 #include "libft.h"
-#include <limits.h>
+#include <stdint.h>
 #include <stdlib.h>
 
 void	*ft_calloc(size_t nmemb, size_t size)
