@@ -18,19 +18,24 @@ void	ft_putchar_fd(char c, int fd)
 	write(fd, &c, 1);
 }
 
-/*
-#include <stdio.h>
+// #include <stdio.h>
 
-int main(int argc, char *argv[])
-{
-    if (argc != 3)
-    {
-        printf("um u can just do smthn liddis : a.out M 1 or!! a.out z 2");
-        return (1);
-    }
-    char c = *argv[1];
-    int fd = ft_atoi(argv[2]);
-    ft_putchar_fd(c, fd);
-    return (0);
-}
-*/
+// int main(int argc, char *argv[])
+// {
+// 	if (argc != 3)
+// 	{
+// 		printf("How to test different types of file descriptors\n");
+// 		printf("Redirect STDOUT (fd = 1)");
+// 		printf("./test.out A 1 > out.txt\n");
+// 		printf("Redirect STDERR (fd = 2)");
+// 		printf("./test.out B 2 2> err.txt\n");
+// 		printf("Redirect STDIN (fd = 0)");
+// 		printf("./test.out C 0 0> in.txt\n");
+// 		printf("actually i might be wrong im tired\n");
+// 		return (1);
+// 	}
+// 	char c = *argv[1];
+// 	int fd = ft_atoi(argv[2]);
+// 	ft_putchar_fd(c, fd);
+// 	return (0);
+// }
